@@ -114,6 +114,10 @@
 		945DBC7C22D482930010AE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945DBC7A22D482930010AE4D /* LaunchScreen.storyboard */; };
 		945DBC7F22D482930010AE4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DBC7E22D482930010AE4D /* main.m */; };
 		945DBC8522D493D90010AE4D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DBC8422D493D90010AE4D /* ThirdViewController.m */; };
+		945DBC8822D589080010AE4D /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DBC8722D589080010AE4D /* FourthViewController.m */; };
+		945DBC8B22D5925A0010AE4D /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DBC8A22D5925A0010AE4D /* FifthViewController.m */; };
+		945DBC8E22D5CC0D0010AE4D /* SixthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DBC8D22D5CC0C0010AE4D /* SixthViewController.m */; };
+		945DBC9122D826620010AE4D /* SeventhViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DBC9022D826620010AE4D /* SeventhViewController.m */; };
 		9460B70A2171D7910029451F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460B7092171D7910029451F /* AppDelegate.m */; };
 		9460B70D2171D7910029451F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460B70C2171D7910029451F /* ViewController.m */; };
 		9460B7102171D7910029451F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9460B70E2171D7910029451F /* Main.storyboard */; };
@@ -449,6 +453,14 @@
 		945DBC7E22D482930010AE4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		945DBC8322D493D90010AE4D /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		945DBC8422D493D90010AE4D /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		945DBC8622D589080010AE4D /* FourthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		945DBC8722D589080010AE4D /* FourthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		945DBC8922D5925A0010AE4D /* FifthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
+		945DBC8A22D5925A0010AE4D /* FifthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FifthViewController.m; sourceTree = "<group>"; };
+		945DBC8C22D5CC0C0010AE4D /* SixthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SixthViewController.h; sourceTree = "<group>"; };
+		945DBC8D22D5CC0C0010AE4D /* SixthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SixthViewController.m; sourceTree = "<group>"; };
+		945DBC8F22D826620010AE4D /* SeventhViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeventhViewController.h; sourceTree = "<group>"; };
+		945DBC9022D826620010AE4D /* SeventhViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeventhViewController.m; sourceTree = "<group>"; };
 		9460B6EE2171B8640029451F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9460B6EF2171B8640029451F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9460B6F12171B8640029451F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -1106,6 +1118,14 @@
 				94E044722280165C0023F887 /* SecondViewController.m */,
 				945DBC8322D493D90010AE4D /* ThirdViewController.h */,
 				945DBC8422D493D90010AE4D /* ThirdViewController.m */,
+				945DBC8622D589080010AE4D /* FourthViewController.h */,
+				945DBC8722D589080010AE4D /* FourthViewController.m */,
+				945DBC8922D5925A0010AE4D /* FifthViewController.h */,
+				945DBC8A22D5925A0010AE4D /* FifthViewController.m */,
+				945DBC8C22D5CC0C0010AE4D /* SixthViewController.h */,
+				945DBC8D22D5CC0C0010AE4D /* SixthViewController.m */,
+				945DBC8F22D826620010AE4D /* SeventhViewController.h */,
+				945DBC9022D826620010AE4D /* SeventhViewController.m */,
 				6EA061B9213E2383009F766F /* Main.storyboard */,
 				6EA061BC213E2386009F766F /* Assets.xcassets */,
 				6EA061BE213E2386009F766F /* LaunchScreen.storyboard */,
@@ -3001,11 +3021,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945DBC8822D589080010AE4D /* FourthViewController.m in Sources */,
 				94E044732280165C0023F887 /* SecondViewController.m in Sources */,
 				945DBC8522D493D90010AE4D /* ThirdViewController.m in Sources */,
 				6EA061B8213E2383009F766F /* ViewController.m in Sources */,
+				945DBC9122D826620010AE4D /* SeventhViewController.m in Sources */,
 				6EA061C3213E2386009F766F /* main.m in Sources */,
+				945DBC8B22D5925A0010AE4D /* FifthViewController.m in Sources */,
 				6EA061B5213E2383009F766F /* AppDelegate.m in Sources */,
+				945DBC8E22D5CC0D0010AE4D /* SixthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3760,7 +3784,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7AK9CM5F4;
+				DEVELOPMENT_TEAM = GL2692EZKE;
 				INFOPLIST_FILE = OC_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3778,7 +3802,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7AK9CM5F4;
+				DEVELOPMENT_TEAM = GL2692EZKE;
 				INFOPLIST_FILE = OC_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3951,6 +3975,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL2692EZKE;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = Runtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3969,6 +3994,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL2692EZKE;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = Runtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

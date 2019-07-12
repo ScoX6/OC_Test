@@ -37,6 +37,7 @@
     
     class_addMethod(kclass, @selector(stuSex), (IMP)Getter, "@@:");
     class_addMethod(kclass, @selector(setStuSex:), (IMP)Setter, "v@:@");
+
     
     objc_registerClassPair(kclass);
 }
