@@ -154,11 +154,6 @@
 }
 
 - (void)test3 {
-    
-    objc_property_t p = class_getProperty([self class], "num");
-    char *atr = property_getAttributes(p);
-    NSLog(@"%s", atr);
-    
     char *clsName = "SubViewController";
     Class kCls = objc_getClass(clsName);
     if (kCls == nil) {
@@ -171,11 +166,13 @@
     class_addMethod(kCls, @selector(number), (IMP)getNumber, "@@:");
     class_addMethod(kCls, @selector(setNumber:), (IMP)setNumber, "v@:@");
     
+    char *ivar_number_c2 = "_age";
+    class_addIvar(kCls, ivar_number_c2, sizeof(NSNumber *), 0, "@");
     char *number_c2 = "age";
     objc_property_attribute_t a1 = {"T","@\"NSString\""};
     objc_property_attribute_t a2 = {"C"};
     objc_property_attribute_t a3 = {"N"};
-    objc_property_attribute_t a4 = {"V","_age"};
+    objc_property_attribute_t a4 = {"V","age"};
     objc_property_attribute_t as[] = {a1,a2,a3,a4};
     BOOL result = class_addProperty(kCls, number_c2, as, 3);
     if (result) {
