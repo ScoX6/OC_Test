@@ -31,6 +31,8 @@
 
 @property (nonatomic, copy) NSString *name;
 
+@property (nonatomic, strong) UITableView *tb;
+
 @end
 
 @implementation SeventhViewController
@@ -45,7 +47,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self test3];
+    Ivar ivar = class_getInstanceVariable([self class], "_tb");
+    const char *typeEncoding = ivar_getTypeEncoding(ivar);
+    NSLog(@"👹 - %s - %s", typeEncoding, @encode(UITableView *));
+    
+    [self test4];
 
 }
 
@@ -167,7 +173,8 @@
     class_addMethod(kCls, @selector(setNumber:), (IMP)setNumber, "v@:@");
     
     char *ivar_number_c2 = "_age";
-    class_addIvar(kCls, ivar_number_c2, sizeof(NSNumber *), 0, "@");
+    BOOL res = class_addIvar(kCls, ivar_number_c2, sizeof(NSNumber *), 0, "@");
+    NSAssert(res, @"添加失败");
     char *number_c2 = "age";
     objc_property_attribute_t a1 = {"T","@\"NSString\""};
     objc_property_attribute_t a2 = {"C"};
@@ -214,6 +221,71 @@ NSNumber* getNumber(id self_p, SEL _cmd_p) {
 
 - (void)say:(NSString *)message {
     NSLog(@"%@", message);
+}
+
+- (void)test4 {
+    const char *cls_name = "NewViewController";
+    Class cls = objc_getClass(cls_name);
+    if (cls == nil) {
+        Class superClass = [UIViewController class];
+        cls = objc_allocateClassPair(superClass, cls_name, 0);
+        NSAssert(cls != nil, @"创建失败");
+    }
+    
+    char *ivar_name_0 = "_tableView";
+    BOOL res_0 = class_addIvar(cls, ivar_name_0, sizeof(UITableView *), 0, @encode(UITableView *));
+    NSAssert(res_0, @"创建失败");
+    char *p_name_0 = "tableView";
+    objc_property_attribute_t p_a_0 = {"N"};
+    objc_property_attribute_t p_a_1 = {"&"};
+    objc_property_attribute_t p_a_2 = {"T", "@\"UITableView\""};
+    objc_property_attribute_t p_a_3 = {"V",p_name_0};
+    objc_property_attribute_t attributes_0[] = {p_a_0, p_a_1, p_a_2, p_a_3};
+    BOOL res_1 = class_addProperty(cls, p_name_0, attributes_0, 3);
+    NSAssert(res_1, @"创建失败");
+    
+    objc_registerClassPair(cls);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    Class cls = NSClassFromString(@"NewViewController");
+//    UIViewController *vc = [[cls alloc] init];
+//    vc.view.backgroundColor = UIColor.magentaColor;
+//    UITableView *tbv = [[UITableView alloc] init];
+//    tbv.delegate = self;
+//    tbv.dataSource = self;
+//    [tbv registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+//    tbv.backgroundColor = UIColor.orangeColor;
+//    tbv.tableFooterView = [[UIView alloc] init];
+//    tbv.frame = CGRectMake(0, 100, self.view.bounds.size.width, 300);
+//    [vc.view addSubview:tbv];
+//    [vc setValue:tbv forKey:@"tableView"];
+//    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)test5 {
+    
+    
+}
+
+#pragma mark- UITableviewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 35.f;
+}
+
+#pragma mark- UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *tbCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    tbCell.textLabel.text = @"Hello World";
+    return tbCell;
 }
 
 @end

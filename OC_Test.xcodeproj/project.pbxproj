@@ -11,6 +11,8 @@
 		233BE9CF259E7D45088B8B71 /* libPods-Carousel-01.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C49DD9059BC949A923CE3 /* libPods-Carousel-01.a */; };
 		255A34DCF31BF892E794C5AF /* libPods-消息转发.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421A5B9FCAB857A6F524FF92 /* libPods-消息转发.a */; };
 		387801852F00D7BFB96F1B9F /* libPods-Undo_Rodo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9501151C2149BAEBC75F2CF6 /* libPods-Undo_Rodo.a */; };
+		4A13779F22DA2BCC0095AE7D /* EighthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13779E22DA2BCC0095AE7D /* EighthViewController.m */; };
+		4A1377A222DB76B30095AE7D /* NinthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1377A122DB76B30095AE7D /* NinthViewController.m */; };
 		4A2CDF10528F10FA29634BBE /* libPods-Gesture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9291D69680EF22304A4B1D00 /* libPods-Gesture.a */; };
 		4F52BCDC9FBFC457AE18BF76 /* libPods-Invocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBFC08EDC000EA590594534 /* libPods-Invocation.a */; };
 		51ABED48277A927E9B1E549C /* libPods-Animation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 234C1F5491DB6FFC64437692 /* libPods-Animation.a */; };
@@ -256,6 +258,10 @@
 		4920232CA1D8BFE918611B55 /* Pods-weak探究.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weak探究.release.xcconfig"; path = "Pods/Target Support Files/Pods-weak探究/Pods-weak探究.release.xcconfig"; sourceTree = "<group>"; };
 		497AF8B65D4AECE97FDA5EF0 /* Pods-Attribute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attribute.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Attribute/Pods-Attribute.debug.xcconfig"; sourceTree = "<group>"; };
 		49B4903F6751CA6E27589E09 /* Pods-Carousel-01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carousel-01.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carousel-01/Pods-Carousel-01.release.xcconfig"; sourceTree = "<group>"; };
+		4A13779D22DA2BCB0095AE7D /* EighthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EighthViewController.h; sourceTree = "<group>"; };
+		4A13779E22DA2BCC0095AE7D /* EighthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EighthViewController.m; sourceTree = "<group>"; };
+		4A1377A022DB76B30095AE7D /* NinthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinthViewController.h; sourceTree = "<group>"; };
+		4A1377A122DB76B30095AE7D /* NinthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinthViewController.m; sourceTree = "<group>"; };
 		4B90BF30B453855A370F861D /* Pods-测试私有Pod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-测试私有Pod.release.xcconfig"; path = "Pods/Target Support Files/Pods-测试私有Pod/Pods-测试私有Pod.release.xcconfig"; sourceTree = "<group>"; };
 		4C964C1BA905C54D90D1E108 /* Pods-Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Timer/Pods-Timer.release.xcconfig"; sourceTree = "<group>"; };
 		55B067F044DEE77F7B2A951D /* Pods-DeviceOrientation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceOrientation.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceOrientation/Pods-DeviceOrientation.release.xcconfig"; sourceTree = "<group>"; };
@@ -1126,6 +1132,10 @@
 				945DBC8D22D5CC0C0010AE4D /* SixthViewController.m */,
 				945DBC8F22D826620010AE4D /* SeventhViewController.h */,
 				945DBC9022D826620010AE4D /* SeventhViewController.m */,
+				4A13779D22DA2BCB0095AE7D /* EighthViewController.h */,
+				4A13779E22DA2BCC0095AE7D /* EighthViewController.m */,
+				4A1377A022DB76B30095AE7D /* NinthViewController.h */,
+				4A1377A122DB76B30095AE7D /* NinthViewController.m */,
 				6EA061B9213E2383009F766F /* Main.storyboard */,
 				6EA061BC213E2386009F766F /* Assets.xcassets */,
 				6EA061BE213E2386009F766F /* LaunchScreen.storyboard */,
@@ -3024,12 +3034,14 @@
 				945DBC8822D589080010AE4D /* FourthViewController.m in Sources */,
 				94E044732280165C0023F887 /* SecondViewController.m in Sources */,
 				945DBC8522D493D90010AE4D /* ThirdViewController.m in Sources */,
+				4A1377A222DB76B30095AE7D /* NinthViewController.m in Sources */,
 				6EA061B8213E2383009F766F /* ViewController.m in Sources */,
 				945DBC9122D826620010AE4D /* SeventhViewController.m in Sources */,
 				6EA061C3213E2386009F766F /* main.m in Sources */,
 				945DBC8B22D5925A0010AE4D /* FifthViewController.m in Sources */,
 				6EA061B5213E2383009F766F /* AppDelegate.m in Sources */,
 				945DBC8E22D5CC0D0010AE4D /* SixthViewController.m in Sources */,
+				4A13779F22DA2BCC0095AE7D /* EighthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
